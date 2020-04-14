@@ -146,10 +146,8 @@ namespace emarket.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,name,price,description,category_id")] Product product, HttpPostedFileBase imgFile)
+        public ActionResult Edit([Bind(Exclude = "img")] Product product, HttpPostedFileBase imgFile)
         {
-            if (ModelState.IsValid)
-            {
 
                 if (imgFile != null)
                 {
@@ -167,9 +165,7 @@ namespace emarket.Controllers
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
-            ViewBag.category_id = new SelectList(db.Categories, "Id", "name", product.category_id);
-            return View(product);
+           
         }
 
         // GET: Products/Delete/5

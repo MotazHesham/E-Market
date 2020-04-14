@@ -17,12 +17,15 @@ namespace emarket.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public string name { get; set; }
 
+        [Required]
         public Nullable<double> price { get; set; }
 
         public string image { get; set; }
 
+        [Required]
         public string description { get; set; }
 
 

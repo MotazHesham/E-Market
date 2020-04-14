@@ -157,9 +157,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\emarket.mdf" />
-    <Content Include="App_Data\emarket_log.ldf">
-      <DependentUpon>emarket.mdf</DependentUpon>
+    <Content Include="App_Data\store.mdf" />
+    <Content Include="App_Data\store_log.ldf">
+      <DependentUpon>store.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
